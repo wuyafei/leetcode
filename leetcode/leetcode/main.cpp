@@ -5,7 +5,7 @@
 
 int main(){
 	int t = clock();
-	cout << fractionToDecimal(-2147483647, 1999) << endl;;
+	cout << fractionToDecimal(1, 21474) << endl;;
 	t = clock() - t;
 	cout << "time=" << t << endl;
 	getchar();

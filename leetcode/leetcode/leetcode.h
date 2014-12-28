@@ -48,4 +48,4 @@ int findMin(vector<int>&);
 //154.Find Minimum in Routated orted Array II
 int findMin2(vector<int>&);
 //166.Fraction to Recurring Decimal
-string fractionToDecimal(int, int);
+string fractionToDecimal(long long, long long);

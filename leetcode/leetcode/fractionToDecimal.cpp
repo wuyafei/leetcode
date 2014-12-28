@@ -1,48 +1,17 @@
 #include<string>
 #include<vector>
-#include<iostream>
+#include<unordered_map>
 using namespace std;
 
-string fractionToDecimal(int numerator, int denominator){
+string fractionToDecimal(long long numerator, long long denominator){
+	bool isNegative = (numerator < 0) ^ (denominator < 0);
 	if (numerator<0)
 		numerator = -numerator;
 	if (denominator<0)
 		denominator = -denominator;
-	bool isPositive = (numerator < 0) ^ (denominator < 0);
 	string str="";
-	vector<int> d;
-	vector<int> r;
-	int intPart = numerator / denominator;
-	int remainder = (numerator%denominator)*10;
-	int i = 0;
-	int recurPoint=0;
-	bool findRecur = false;
-	while (remainder != 0){
-		int j = i - 1;
-		while (j >= 0){
-			if (r[j] == remainder){
-				recurPoint = j;
-				findRecur = true;
-				break;
-			}
-			j--;
-		}
-		if (findRecur)
-			break;
-		r.push_back(remainder);
-		if (remainder < denominator){
-			d.push_back(0);
-			//cout << d[i] << endl;
-			i++;
-			remainder *= 10;
-			continue;
-		}
-		d.push_back( remainder / denominator);
-		//cout << d[i] << endl;
-		remainder = remainder % denominator;
-		remainder *= 10;
-		i++;
-	}
+	long long intPart = numerator / denominator;
+	long long remainder = numerator%denominator;
 	
 	if (intPart == 0)
 		str = '0' + str;
@@ -50,25 +19,23 @@ string fractionToDecimal(int numerator, int denominator){
 		str = (char)(intPart % 10 + '0') + str;
 		intPart /= 10;
 	}
-	if(i==0)
-		return str;
-	str = str + '.';
-	if (findRecur){
-		for (int k = 0; k < recurPoint; k++){
-			str = str + (char)(d[k] + '0');
+	if (remainder != 0)
+		str += '.';
+	
+	unordered_map<int, int> map;
+	while (remainder != 0){
+		if (map.count(remainder)>0){
+			str.insert(map[remainder], 1, '(');
+			str += ')';
+			break;
 		}
-		str = str + '(';
-		for (int k = recurPoint; k < i; k++){
-			str = str + (char)(d[k] + '0');
-		}
-		str = str + ')';
+		map[remainder] = str.size();
+		remainder *= 10;
+		str += (char)('0' + remainder / denominator);
+		remainder = remainder % denominator;
+		
 	}
-	else{
-		for (int k = 0; k < i; k++){
-			str = str + (char)(d[k] + '0');
-		}
-	}
-	if (!isPositive)
+	if (isNegative && numerator!=0)
 		str = '-' + str;
 	return str;
 }
