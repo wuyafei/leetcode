@@ -53,3 +53,5 @@ int findMin2(vector<int>&);
 string fractionToDecimal(long long, long long);
 //169.Majority Element
 int majorityElement(vector<int>&);
+//172.Factorial Trailing Zeroes
+int trailingZeroes(int);
