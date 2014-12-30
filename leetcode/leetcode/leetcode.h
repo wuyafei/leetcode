@@ -49,6 +49,8 @@ ListNode* sortList(ListNode*);
 int findMin(vector<int>&);
 //154.Find Minimum in Routated orted Array II
 int findMin2(vector<int>&);
+//160.Intersection of Two Linked Lists
+ListNode* getIntersectionNode(ListNode*, ListNode*);
 //166.Fraction to Recurring Decimal
 string fractionToDecimal(long long, long long);
 //169.Majority Element
