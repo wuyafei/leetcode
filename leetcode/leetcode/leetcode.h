@@ -51,3 +51,5 @@ int findMin(vector<int>&);
 int findMin2(vector<int>&);
 //166.Fraction to Recurring Decimal
 string fractionToDecimal(long long, long long);
+//169.Majority Element
+int majorityElement(vector<int>&);
