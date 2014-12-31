@@ -27,6 +27,10 @@ ListNode* partition(ListNode*, int);
 vector<string> restoreIpAddresses(string);
 //95.Unique Binary Search Tree II
 vector<TreeNode *> generateTrees(int);
+//108.Convert Sorted Array to Binary Search Tree
+TreeNode* sortedArrayToBST(vector<int>&);
+//109.Convert Sorted List to Binary Search Tree
+TreeNode *sortedListToBST(ListNode*);
 //115.Distinct Subsequence
 int numDistinct(string S, string T);
 //119.Pascal's Triangle II
