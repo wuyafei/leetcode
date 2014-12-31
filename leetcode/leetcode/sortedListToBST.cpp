@@ -2,7 +2,7 @@
 #include<queue>
 using namespace std;
 
-
+/*
 TreeNode* creatBST(int n){
 	queue<TreeNode*> q;
 	TreeNode* root = new TreeNode(0);
@@ -50,4 +50,27 @@ TreeNode* sortedListToBST(ListNode *head) {
 	TreeNode* root = creatBST(length);
 	inorderTraversal(root, head);
 	return root;
+}
+*/
+
+
+TreeNode* toBST(ListNode* &head, int l, int h){ //pass value by reference is the key point
+	if (h<l)
+		return NULL;
+	int m = (h + l) / 2;
+	TreeNode* node = new TreeNode(0);
+	node->left = toBST(head, l, m - 1);
+	node->val = head->val;
+	head = head->next;
+	node->right = toBST(head, m + 1, h);
+	return node;
+}
+TreeNode *sortedListToBST(ListNode *head) {
+	ListNode* p = head;
+	int n = 0;
+	while (p){
+		p = p->next;
+		n++;
+	}
+	return toBST(head, 0, n - 1);
 }
