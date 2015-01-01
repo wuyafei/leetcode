@@ -33,6 +33,8 @@ TreeNode* sortedArrayToBST(vector<int>&);
 TreeNode *sortedListToBST(ListNode*);
 //112.Path Sum
 bool hasPathSum(TreeNode*, int);
+//113.Path Sum II
+vector<vector<int> > pathSum(TreeNode*, int);
 //115.Distinct Subsequence
 int numDistinct(string S, string T);
 //119.Pascal's Triangle II
