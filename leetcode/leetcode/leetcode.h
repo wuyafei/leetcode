@@ -41,6 +41,8 @@ int ladderLength(string, string, unordered_set<string>&);
 int longestConsecutive(vector<int>&);
 //129.Sum Root to Leaf Numbers
 int sumNumbers(TreeNode*);
+//141.Linked List Cycle
+bool hasCycle(ListNode*);
 //143.Reorder List
 void reorderList(ListNode*);
 //145.Binary Tree Postorder Tranversal
