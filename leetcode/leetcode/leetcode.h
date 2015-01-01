@@ -43,6 +43,8 @@ int longestConsecutive(vector<int>&);
 int sumNumbers(TreeNode*);
 //141.Linked List Cycle
 bool hasCycle(ListNode*);
+//142.Linked List Cycle II
+ListNode* detectCycle(ListNode*);
 //143.Reorder List
 void reorderList(ListNode*);
 //145.Binary Tree Postorder Tranversal
