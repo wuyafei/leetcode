@@ -31,6 +31,8 @@ vector<TreeNode *> generateTrees(int);
 TreeNode* sortedArrayToBST(vector<int>&);
 //109.Convert Sorted List to Binary Search Tree
 TreeNode *sortedListToBST(ListNode*);
+//112.Path Sum
+bool hasPathSum(TreeNode*, int);
 //115.Distinct Subsequence
 int numDistinct(string S, string T);
 //119.Pascal's Triangle II
