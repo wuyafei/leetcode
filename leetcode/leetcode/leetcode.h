@@ -25,6 +25,8 @@ int largestRectangleArea(vector<int>&);
 ListNode* partition(ListNode*, int);
 //93.Restore IP Address
 vector<string> restoreIpAddresses(string);
+//94.Binary Tree Inorder Traversal
+vector<int> inorderTraversal(TreeNode*);
 //95.Unique Binary Search Tree II
 vector<TreeNode *> generateTrees(int);
 //108.Convert Sorted Array to Binary Search Tree
