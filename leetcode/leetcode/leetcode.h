@@ -32,11 +32,15 @@ TreeNode* sortedArrayToBST(vector<int>&);
 //109.Convert Sorted List to Binary Search Tree
 TreeNode *sortedListToBST(ListNode*);
 //110.Balanced Binary Tree
-bool isBalanced(TreeNode* root);
+bool isBalanced(TreeNode*);
+//111.Minimum Depth of Bianry Tree
+int minDepth(TreeNode*);
 //112.Path Sum
 bool hasPathSum(TreeNode*, int);
 //113.Path Sum II
 vector<vector<int> > pathSum(TreeNode*, int);
+//114.Flatten Binary Tree to Linked List
+void flatten(TreeNode*);
 //115.Distinct Subsequence
 int numDistinct(string S, string T);
 //119.Pascal's Triangle II
