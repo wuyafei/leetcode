@@ -24,6 +24,7 @@ vector<TreeNode*> genTree(int start, int end){
 				TreeNode *tn = new TreeNode(i);
 				(*tn).left = (*itrl);
 				(*tn).right = (*itrr);
+				(*v).push_back(tn);
 			}
 		}
 	}
@@ -32,6 +33,6 @@ vector<TreeNode*> genTree(int start, int end){
 
 
 vector<TreeNode*> generateTrees(int n) {
-	return genTree(0, n - 1);
+	return genTree(1, n);
 }
 
