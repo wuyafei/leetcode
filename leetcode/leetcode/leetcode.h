@@ -31,6 +31,8 @@ vector<TreeNode *> generateTrees(int);
 TreeNode* sortedArrayToBST(vector<int>&);
 //109.Convert Sorted List to Binary Search Tree
 TreeNode *sortedListToBST(ListNode*);
+//110.Balanced Binary Tree
+bool isBalanced(TreeNode* root);
 //112.Path Sum
 bool hasPathSum(TreeNode*, int);
 //113.Path Sum II
