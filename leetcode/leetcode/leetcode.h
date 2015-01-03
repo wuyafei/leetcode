@@ -9,6 +9,8 @@ struct TreeNode;
 int maxGap();
 //15.3Sum
 vector<vector<int> > threeSum(vector<int>&);
+//21.Merge Two Sorted List
+ListNode* mergeTwoLists(ListNode*, ListNode*);
 //26.Remove Duplicates from Sorted Array
 int removeDuplicates(int[], int);
 //27.Remove Element
