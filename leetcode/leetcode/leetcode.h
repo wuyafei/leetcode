@@ -11,6 +11,8 @@ int maxGap();
 vector<vector<int> > threeSum(vector<int>&);
 //26.Remove Duplicates from Sorted Array
 int removeDuplicates(int[], int);
+//27.Remove Element
+int removeElement(int[], int, int);
 //41.First Missing Positive
 int firstMissingPositive(int[], int);
 //46.Permutations
