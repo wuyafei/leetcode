@@ -28,14 +28,6 @@ using namespace std;
 //	}
 //	return rslt;
 //}
-
-vector<vector<int> > pathSum2(TreeNode* root, int sum){
-	vector<vector<int> > rslt;
-	vector<int> vec;
-	pathDown(root, sum, rslt, vec);
-	return rslt;
-}
-
 void pathDown(TreeNode* node, int target, vector<vector<int> > &rslt, vector<int> vec){
 	if (!node)
 		return;
@@ -47,3 +39,11 @@ void pathDown(TreeNode* node, int target, vector<vector<int> > &rslt, vector<int
 	pathDown(node->left, target - node->val, rslt, vec);
 	pathDown(node->right, target - node->val, rslt, vec);
 }
+
+vector<vector<int> > pathSum2(TreeNode* root, int sum){
+	vector<vector<int> > rslt;
+	vector<int> vec;
+	pathDown(root, sum, rslt, vec);
+	return rslt;
+}
+

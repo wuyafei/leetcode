@@ -9,6 +9,8 @@ struct TreeNode;
 int maxGap();
 //15.3Sum
 vector<vector<int> > threeSum(vector<int>&);
+//26.Remove Duplicates from Sorted Array
+int removeDuplicates(int[], int);
 //41.First Missing Positive
 int firstMissingPositive(int[], int);
 //46.Permutations
@@ -29,6 +31,10 @@ vector<string> restoreIpAddresses(string);
 vector<int> inorderTraversal(TreeNode*);
 //95.Unique Binary Search Tree II
 vector<TreeNode *> generateTrees(int);
+//102.Binary Tree Level Order Traversal
+vector<vector<int> > levelOrder(TreeNode*);
+//107.Binary Tree Level Order Traversal II
+vector<vector<int> > levelOrder2(TreeNode*);
 //108.Convert Sorted Array to Binary Search Tree
 TreeNode* sortedArrayToBST(vector<int>&);
 //109.Convert Sorted List to Binary Search Tree
