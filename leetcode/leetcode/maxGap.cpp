@@ -24,9 +24,6 @@ int maxGap_bf(int arr[], int n){
 2. find the maximun element in arr[i_min+1..n), and its value is v_max
 3. now the maximun gap is eithor v_max-v_min or in arr[0..i_min-1], and we can recursively solve the latter one
 */
-int max_(int a, int b){
-	return a > b ? a : b;
-}
 int maxGap_dv(int arr[], int end){
 	if (end < 1)
 		return INT_MIN;
@@ -41,13 +38,13 @@ int maxGap_dv(int arr[], int end){
 		}
 	}
 	if (i_min == end - 1)
-		return max_(arr[i_min] - arr[i_min - 1], maxGap_dv(arr, end - 1));
+		return max(arr[i_min] - arr[i_min - 1], maxGap_dv(arr, end - 1));
 	int v_max = arr[i_min+1];
 	for (int i = i_min + 2; i < end; i++){
 		if (arr[i]>v_max)
 			v_max = arr[i];
 	}
-	return max_(v_max - v_min, maxGap_dv(arr, i_min - 1));
+	return max(v_max - v_min, maxGap_dv(arr, i_min - 1));
 }
 
 /*
@@ -60,14 +57,14 @@ int maxGap_lin(int arr[], int n){
 	for (int i = 0; i<n - 1; i++){
 		c[i] = arr[i + 1] - arr[i];
 	}
-	int max = c[0], maxEndingHere = c[0];
+	int maxVal = c[0], maxEndingHere = c[0];
 	for (int i = 1; i<n - 1; i++){
-		maxEndingHere = max_(c[i], maxEndingHere + c[i]);
-		if (maxEndingHere > max)
-			max = maxEndingHere;
+		maxEndingHere = max(c[i], maxEndingHere + c[i]);
+		if (maxEndingHere > maxVal)
+			maxVal = maxEndingHere;
 	}
 	delete[] c;
-	return max;
+	return maxVal;
 }
 
 

@@ -1,39 +1,43 @@
 #include"util.h"
 using namespace std;
+/*
+Merge two sorted linked lists and return it as a new list.
+The new list should be made by splicing together the nodes of the first two lists.
+*/
 
-ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
-	if (!l1)
-		return l2;
-	if (!l2)
-		return l1;
-	ListNode *p1, *p2;
-	if (l1->val < l2->val){
-		p1 = l1;
-		p2 = l2;
-	}
-	else{
-		p2 = l1;
-		p1 = l2;
-	}
-	ListNode* head = p1;
-	while (p1->next && p2){
-		if (p1->next->val < p2->val){
-			p1 = p1->next;
-		}
-		else{
-			ListNode* tmp1 = p1->next;
-			ListNode* tmp2 = p2->next;
-			p1->next = p2;
-			p2->next = tmp1;
-			p2 = tmp2; 
-			p1 = p1->next;
-		}
-	}
-	if (!p1->next){
-		p1->next = p2;
-	}
-	return head;
-}
+//ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
+//	if (!l1)
+//		return l2;
+//	if (!l2)
+//		return l1;
+//	ListNode *p1, *p2;
+//	if (l1->val < l2->val){
+//		p1 = l1;
+//		p2 = l2;
+//	}
+//	else{
+//		p2 = l1;
+//		p1 = l2;
+//	}
+//	ListNode* head = p1;
+//	while (p1->next && p2){
+//		if (p1->next->val < p2->val){
+//			p1 = p1->next;
+//		}
+//		else{
+//			ListNode* tmp1 = p1->next;
+//			ListNode* tmp2 = p2->next;
+//			p1->next = p2;
+//			p2->next = tmp1;
+//			p2 = tmp2; 
+//			p1 = p1->next;
+//		}
+//	}
+//	if (!p1->next){
+//		p1->next = p2;
+//	}
+//	return head;
+//}
 
 ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
 	ListNode dummy(0);

@@ -1,10 +1,7 @@
 #include<vector>
 #include<unordered_set>
+#include"util.h"
 using namespace std;
-
-struct Interval;
-struct ListNode;
-struct TreeNode;
 //0.Maximum Gap
 int maxGap();
 //15.3Sum
@@ -35,8 +32,12 @@ vector<string> restoreIpAddresses(string);
 vector<int> inorderTraversal(TreeNode*);
 //95.Unique Binary Search Tree II
 vector<TreeNode *> generateTrees(int);
+//100.Same Tree
+bool isSameTree(TreeNode*, TreeNode*);
 //102.Binary Tree Level Order Traversal
 vector<vector<int> > levelOrder(TreeNode*);
+//104.Maximum Depth of Binary Tree
+int maxDepth(TreeNode*);
 //107.Binary Tree Level Order Traversal II
 vector<vector<int> > levelOrder2(TreeNode*);
 //108.Convert Sorted Array to Binary Search Tree

@@ -5,9 +5,6 @@ using namespace std;
 	Sort a linked list in O(n log n) time using constant space complexity.
 */
 
-int min_(int a, int b){
-	return a < b ? a : b;
-}
 int count_size(ListNode *node){
 	int n = 0;
 	while (node != NULL){
@@ -26,8 +23,8 @@ ListNode *sortList(ListNode *head) {
 		last = &virtual_head;
 		it = virtual_head.next;
 		while (iter <  n){
-			a = min_(n - iter, block_size);
-			b = min_(n - iter - a, block_size);
+			a = min(n - iter, block_size);
+			b = min(n - iter - a, block_size);
 
 			A = it;
 			if (b != 0){

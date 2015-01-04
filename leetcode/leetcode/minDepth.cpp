@@ -7,9 +7,6 @@ Given a binary tree, find its minimum depth.
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 */
 
-int inline minimum(int a, int b){
-	return a < b ? a : b;
-}
 int minDepth_recursive(TreeNode *root){
 	if (root == NULL)
 		return 0;
@@ -20,7 +17,7 @@ int minDepth_recursive(TreeNode *root){
 	else if (root->right == NULL)
 		return 1 + minDepth_recursive(root->left);
 	else
-		return 1 + minimum(minDepth_recursive(root->left), minDepth_recursive(root->right));
+		return 1 + min(minDepth_recursive(root->left), minDepth_recursive(root->right));
 }
 
 //level order tranversal
