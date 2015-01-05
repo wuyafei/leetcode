@@ -20,6 +20,8 @@ vector<vector<int> > permute(vector<int>&);
 bool canJump(int[], int);
 //57.Insert Interval
 vector<Interval> insert(vector<Interval>&, Interval);
+//69.Sqrt(x)
+int sqrt(int);
 //77.Combinations
 vector<vector<int> > combine(int, int);
 //84.Largest Rectangle in Histogram
