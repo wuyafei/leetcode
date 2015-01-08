@@ -32,6 +32,8 @@ ListNode* deleteDuplicates(ListNode*);
 int largestRectangleArea(vector<int>&);
 //86.Partitiion List
 ListNode* partition(ListNode*, int);
+//88.Merge Sorted Array
+void merge(int[],int,int[],int);
 //93.Restore IP Address
 vector<string> restoreIpAddresses(string);
 //94.Binary Tree Inorder Traversal
