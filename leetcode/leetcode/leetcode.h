@@ -12,6 +12,8 @@ ListNode* mergeTwoLists(ListNode*, ListNode*);
 int removeDuplicates(int[], int);
 //27.Remove Element
 int removeElement(int[], int, int);
+//34.Search for a Range
+vector<int> searchRange(int[],int,int);
 //41.First Missing Positive
 int firstMissingPositive(int[], int);
 //46.Permutations
