@@ -26,6 +26,8 @@ vector<Interval> insert(vector<Interval>&, Interval);
 int sqrt(int);
 //77.Combinations
 vector<vector<int> > combine(int, int);
+//83.Remove Duplicates from sorted List
+ListNode* deleteDuplicates(ListNode*);
 //84.Largest Rectangle in Histogram
 int largestRectangleArea(vector<int>&);
 //86.Partitiion List
@@ -62,6 +64,8 @@ void flatten(TreeNode*);
 int numDistinct(string S, string T);
 //119.Pascal's Triangle II
 vector<int> getRow(int);
+//125.Valid Palindrome
+bool isPalindrome(string);
 //127.Word Ladder
 int ladderLength(string, string, unordered_set<string>&);
 //128.Longest Consecutive Sequence
