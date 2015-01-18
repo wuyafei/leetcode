@@ -1,5 +1,6 @@
 #include<vector>
 #include<unordered_set>
+#include<string>
 #include"util.h"
 using namespace std;
 //0.Maximum Gap
@@ -24,6 +25,8 @@ bool canJump(int[], int);
 vector<Interval> insert(vector<Interval>&, Interval);
 //66.Plus one
 vector<int> plusOne(vector<int>&);
+//67.add binary
+string addBinary(string, string);
 //69.Sqrt(x)
 int sqrt(int);
 //70.Climbing Stairs
