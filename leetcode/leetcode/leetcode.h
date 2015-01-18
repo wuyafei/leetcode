@@ -26,6 +26,8 @@ vector<Interval> insert(vector<Interval>&, Interval);
 vector<int> plusOne(vector<int>&);
 //69.Sqrt(x)
 int sqrt(int);
+//70.Climbing Stairs
+int climbStairs(int);
 //77.Combinations
 vector<vector<int> > combine(int, int);
 //83.Remove Duplicates from sorted List
