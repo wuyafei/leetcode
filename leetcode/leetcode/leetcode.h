@@ -64,6 +64,8 @@ vector<vector<int> > pathSum(TreeNode*, int);
 void flatten(TreeNode*);
 //115.Distinct Subsequence
 int numDistinct(string S, string T);
+//118.Pascal's Triangle
+vector<vector<int> > generatePascal(int);
 //119.Pascal's Triangle II
 vector<int> getRow(int);
 //125.Valid Palindrome
