@@ -22,6 +22,8 @@ vector<vector<int> > permute(vector<int>&);
 bool canJump(int[], int);
 //57.Insert Interval
 vector<Interval> insert(vector<Interval>&, Interval);
+//66.Plus one
+vector<int> plusOne(vector<int>&);
 //69.Sqrt(x)
 int sqrt(int);
 //77.Combinations
