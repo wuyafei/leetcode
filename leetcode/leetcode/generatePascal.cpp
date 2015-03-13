@@ -17,7 +17,6 @@ vector<vector<int> > generatePascal(int numRows){
         int j=1;
         while(j<(*pre_row).size()){
             (*cur_row).push_back((*pre_row).at(j-1)+(*pre_row).at(j));
-            j++;
         }
         (*cur_row).push_back(1);
         rslt.push_back(*cur_row);

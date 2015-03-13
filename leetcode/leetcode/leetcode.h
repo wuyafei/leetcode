@@ -23,6 +23,8 @@ vector<vector<int> > permute(vector<int>&);
 bool canJump(int[], int);
 //57.Insert Interval
 vector<Interval> insert(vector<Interval>&, Interval);
+//58.Length of Last Word
+int lengthOfLastWord(String);
 //66.Plus one
 vector<int> plusOne(vector<int>&);
 //67.add binary
